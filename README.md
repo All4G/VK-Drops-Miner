@@ -1,5 +1,7 @@
 # VK Live Drops Miner
 
+<img width="1239" height="979" alt="image" src="assets/image.png" />
+
 Программа для Windows, которая автоматически собирает дропы (боксы) на [live.vkvideo.ru](https://live.vkvideo.ru):
 выбирает кампании, запускает стримы, ждёт 100 % прогресса, сама нажимает «Получить» и переходит к следующей награде.
 
