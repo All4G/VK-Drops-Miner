@@ -1,13 +1,13 @@
 # VK Live Drops Miner
 
-<img width="1239" height="979" alt="image" src="assets/image.png" />
-
 Программа для Windows, которая автоматически собирает дропы (боксы) на [live.vkvideo.ru](https://live.vkvideo.ru):
 выбирает кампании, запускает стримы, ждёт 100 % прогресса, сама нажимает «Получить» и переходит к следующей награде.
 
 > **English:** a Windows desktop app (CustomTkinter + Playwright) that watches live streams in a hidden
 > browser and claims VK Live drops automatically. Download the latest `VKDropsMiner-…-win64.zip` from
 > [Releases](../../releases), unzip, run `VKDropsMiner.exe`, log in to VK once.
+
+<img width="1239" height="979" alt="image" src="assets/image.png" />
 
 ## Возможности
 
