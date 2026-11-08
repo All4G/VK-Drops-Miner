@@ -31,7 +31,8 @@ def test_frozen_data_dir_is_next_to_exe():
     old = (m.FROZEN, sys.executable)
     try:
         m.FROZEN, sys.executable = True, str(exe_dir / "VKDropsMiner.exe")
-        assert m._resolve_data_dir() == exe_dir
+        # resolve(): on Windows temp dirs may be given as 8.3 short names (RUNNER~1)
+        assert m._resolve_data_dir() == exe_dir.resolve()
     finally:
         m.FROZEN, sys.executable = old
 
@@ -41,7 +42,7 @@ def test_frozen_data_dir_falls_back_to_appdata_when_exe_dir_is_not_writable():
     try:
         m.FROZEN, sys.executable = True, str(Path(tempfile.mkdtemp()) / "x" / "VKDropsMiner.exe")  # parent missing -> not writable
         os.environ["APPDATA"] = tempfile.mkdtemp()
-        assert m._resolve_data_dir() == Path(os.environ["APPDATA"]) / "VKDropsMiner"
+        assert m._resolve_data_dir().resolve() == (Path(os.environ["APPDATA"]) / "VKDropsMiner").resolve()
     finally:
         m.FROZEN, sys.executable = old[0], old[1]
         if old[2] is None:
