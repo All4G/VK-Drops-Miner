@@ -1,0 +1,28 @@
+<html><body>
+<div class="TopMenuRightAuthorized_block_x">me</div>
+<div class="DropCampaigns_root_x">
+  <div class="DropCampaigns_listTitleWrapper_a"><span>Активные</span></div>
+  <div class="DropCampaignsList_root_a">
+    <div class="DropCampaignsListItem_root_a"><div>Кампания Альфа</div><div>Игра Один</div><div>06 ноября 19:00 - 12 ноября 13:00</div></div>
+  </div>
+  <div class="DropCampaigns_listTitleWrapper_b"><span>Доступные</span></div>
+  <div class="DropCampaignsList_root_b">
+    <div class="DropCampaignsListItem_root_b"><div>Кампания Бета</div><div>Игра Два</div><div>07 ноября 10:00 - 14 ноября 10:00</div></div>
+    <div class="DropCampaignsListItem_root_c"><div>Кампания Гамма</div><div>Игра Три</div><div>08 ноября 10:00 - 15 ноября 10:00</div></div>
+  </div>
+  <div class="DropCampaigns_listTitleWrapper_c"><span>Завершенные</span></div>
+  <div class="DropCampaignsList_root_c">
+    <div class="DropCampaignsListItem_root_d"><div>Кампания Старая</div><div>Игра Один</div><div>01 октября 10:00 - 08 октября 10:00</div></div>
+  </div>
+</div>
+<script>
+document.addEventListener('click', e => {
+  const card = e.target.closest('[class*="DropCampaignsListItem_root_"]');
+  if (card && !card.querySelector('.details')) {
+    const d = document.createElement('div'); d.className = 'details';
+    d.innerHTML = '<button id="watch">Смотреть стрим</button>'; card.appendChild(d);
+  }
+  if (e.target.id === 'watch') { /*NAV*/ location.href = 'https://live.vkvideo.ru/streamer'; }
+});
+</script>
+</body></html>

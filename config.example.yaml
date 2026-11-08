@@ -1,0 +1,30 @@
+# VK Live Drops Miner — настройки
+# Все параметры необязательны: если ключа нет, берётся значение по умолчанию.
+# После изменения перезапустите программу.
+
+browser:
+  mute_audio: true        # звук браузера выключен
+  start_hidden: false     # true — браузер сразу запускается скрытым (окно создаётся за экраном, без мигания)
+  headless: false         # true — браузера с окном нет ВООБЩЕ. Войти в VK нужно один раз с headless: false,
+                          # сессия сохранится в vk_auth.json
+
+drops:
+  check_interval_seconds: 30        # как часто читать прогресс (5..120)
+  claim_delay_min: 2                # пауза перед нажатием «Получить» (сек)
+  claim_delay_max: 5
+  stall_timeout_minutes: 10         # прогресс не растёт столько минут -> открыть другой стрим
+  stream_start_timeout_seconds: 15  # сколько ждать плеер после нажатия «Смотреть стрим»
+  offline_check_seconds: 4          # стример не в эфире дольше N сек -> сразу нажать «Смотреть стрим» снова (0 = выкл.)
+  max_start_attempts: 100           # столько неудачных запусков стрима подряд, прежде чем пропустить кампанию
+  preferred_games: []               # например ["Мир кораблей", "War Thunder"] — такие кампании выше в списке
+  blacklist_games: []               # кампании этих игр не показываются
+
+gui:
+  show_notifications: true   # всплывающее уведомление из трея при получении награды
+  start_in_tray: false       # true — окно программы сразу уходит в трей
+
+logging:
+  level: "INFO"
+  file: "logs/miner.log"
+  max_size_mb: 10
+  backup_count: 5

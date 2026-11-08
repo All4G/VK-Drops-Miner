@@ -1,0 +1,26 @@
+# --- секреты и личные данные: НИКОГДА не коммитить ---
+vk_auth.json
+cookies.jar
+config.yaml
+debug/
+debug_*.html
+*.png.bak
+
+# --- рабочие файлы программы ---
+logs/
+*.log
+browsers/
+
+# --- сборка ---
+build/
+dist/
+*.spec
+
+# --- python / ide ---
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
