@@ -86,8 +86,6 @@ python -m pytest -q          # тесты работают на синтетич
 build_exe.bat                # сборка exe (Windows)
 ```
 
-Релиз: поднимите `__version__` в `main.py`, затем `git tag v1.0.1 && git push origin v1.0.1` — GitHub Actions
-соберёт и опубликует `VKDropsMiner-v1.0.1-win64.zip`.
 
 ## Лицензия
 
